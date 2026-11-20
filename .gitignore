@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Anciennes versions
+0olds/
+0Olds/
+
+# Conserver uniquement le script d'arrêt dans runs/
+runs/*
+!runs/shutdown-on-actor.sh
