@@ -56,6 +56,7 @@ $$
 7\ \text{pulses/rev} \times 2\ \text{counted transitions} \times 30
 = 420\ \text{counts/wheel rev}.
 $$
+
 In my own measurements, however, I obtained **414 counts per complete wheel revolution**. One possible explanation is that the gearbox's actual reduction ratio differs slightly from exactly 30:1. Encoder decoding conventions, measurement procedure and manufacturing tolerances should also be checked before drawing a firm conclusion.
 
 For the current real-robot firmware, I therefore use the **empirically measured 414 counts/revolution** when converting encoder counts to wheel angle:
