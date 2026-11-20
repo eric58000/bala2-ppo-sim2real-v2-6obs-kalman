@@ -39,8 +39,8 @@ My extended policy uses **six observations**, in this order:
 | 1 | Pitch angular velocity | rad/s | Gyroscope, with bias handling |
 | 2 | Left wheel angular velocity | rad/s | Encoder position differences |
 | 3 | Right wheel angular velocity | rad/s | Encoder position differences |
-| 4 | Left wheel angular position | rad | Magnetic encoder counts |
-| 5 | Right wheel angular position | rad | Magnetic encoder counts |
+| 4 | Left wheel angular position | ticks | Magnetic encoder counts |
+| 5 | Right wheel angular position | ticks | Magnetic encoder counts |
 
 **Important:** these positions are *unwrapped wheel angles relative to the encoder reference set at the beginning of a run*. They are not absolute orientation measurements in a global/world reference frame. They provide the policy with wheel displacement since reset.
 
