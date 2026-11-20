@@ -1,16 +1,16 @@
 #!/bin/bash
 
-# Usage: sudo bash /chemin/vers/shutdown-on-actor.sh
+# Usage: sudo bash /path/to/shutdown-on-actor.sh
 if [ "$#" -ne 0 ]; then
     echo "Usage: $0" >&2
     exit 2
 fi
 
-echo "Surveillance du dossier courant et de ses sous-dossiers."
+echo "Monitoring the current directory and its subdirectories."
 
 while true; do
     if ! file=$(find . -type f -name actor.h -print -quit); then
-        echo "Echec de la recherche de actor.h." >&2
+        echo "Failed to search for actor.h." >&2
         exit 1
     fi
     if [ -n "$file" ]; then
@@ -19,9 +19,9 @@ while true; do
     sleep 30
 done
 
-echo "Fichier detecte : $file. Extinction dans 10 secondes (Ctrl+C pour annuler)."
+echo "File detected: $file. Shutting down in 10 seconds (Ctrl+C to cancel)."
 sleep 10
 if ! systemctl --no-ask-password poweroff; then
-    echo "Echec de l'extinction. Lancez le script avec les droits necessaires sur l'hote Ubuntu." >&2
+    echo "Shutdown failed. Run the script with the required permissions on the Ubuntu host." >&2
     exit 1
 fi
