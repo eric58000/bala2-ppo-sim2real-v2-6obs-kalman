@@ -124,7 +124,7 @@ A self-balancing robot can move unexpectedly when a policy is deployed. Test wit
 
 ## Credits
 
-- **Original reinforcement learning tutorial, MuJoCo workflow and project inspiration:** [Shawn Hymel — Reinforcement Learning for Robotics](#)
+- **Original reinforcement learning tutorial, MuJoCo workflow and project inspiration:** [Shawn Hymel - Reinforcement Learning for Robotics](https://github.com/ShawnHymel/reinforcement-learning-for-robotics/tree/main)
 - **Experimental extensions described in this repository:** six-observation policy input, encoder-based wheel position feedback, IMU Kalman filtering, and sim-to-real training investigations.
 - **Author / Maintainer:** [Eric Cabret](https://www.linkedin.com/in/eric-cabret/), DV2000, France.
 
